@@ -39,8 +39,9 @@ class Dragon extends Criatura implements Volador {
 
     @Override
     public void aterrizar() {
-        System.out.println("Acción: " + this.nombre + " aterriza pesadamente.");
+        System.out.println("\nAcción: " + this.nombre + " aterriza pesadamente.");
     }
+
 }
 
 class Mago extends Criatura implements Magico {

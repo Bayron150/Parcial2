@@ -23,12 +23,21 @@ public class Batalla {
             if (atacante instanceof Volador) {
                 ((Volador) atacante).volar();
             }
+
+            atacante.atacar(defensor);
+
+
+            if (atacante instanceof Volador) {
+                ((Volador) atacante).aterrizar(); // <--- Aterrizaje añadido aquí
+            }
+
+            
             if (atacante instanceof Magico) {
                 // El Mago tiene su propia lógica de ataque que llama a lanzarHechizo
             }
             
             // Cada criatura atacará según su implementación
-            atacante.atacar(defensor);
+            
 
             // Revertir roles para el siguiente turno
             Criatura temp = atacante;
